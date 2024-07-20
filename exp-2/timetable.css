@@ -1,0 +1,31 @@
+.single-line {
+            white-space: nowrap;
+display: flex;
+            justify-content: space-between;
+        }
+body {
+            font-family: Arial, sans-serif;
+        }
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .timetable, .timetable th, .timetable td {
+            border: 1px solid black;
+        }
+        .timetable th, .timetable td {
+                        text-align: center;
+                        cellpadding:75px;
+        }
+                 .colour{
+         color:red;
+
+}
+
+       .padd{
+padding-right:50px;
+ padding-left:50px;
+}
+.text{
+text-align:center;
+}
