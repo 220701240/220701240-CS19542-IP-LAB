@@ -1,0 +1,33 @@
+.picture{
+float: right;
+margin-left: 10px;
+  }
+
+.container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+ .left, .right {
+            width: 45%;
+        }
+
+  .right {
+            text-align: right;
+        }
+   
+table,th,td{
+border :1px,solid black;
+}
+
+.style{
+background-color:black; 
+color:white;
+}
+.det{
+color:blue;
+}
+.add{
+color:gray;
+
+}
