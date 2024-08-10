@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rajalakshmi website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+header{
+        background: linear-gradient(to right, black 20%, purple 60%, black 80%);
+        color: white;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height:100px;
+        }
+
+.sidebar {
+   width: 200px;
+  background-color:grey;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: purple;
+  padding: 4px;
+ 
+}
+ 
+.active {
+  background-color:white;
+  color:purple;
+}
+.sidebar a:hover:not(.active) {
+  background-color:white;
+  color: purple;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+.style{
+background-color:grey; 
+color:black;
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+        <h1><u>RAJALAKSHMI</u><br><span class="sec">ENGINEERING COLLEGE</span></h1>
+    </header>
+<h3 style="text-align:center;color:blue;">Rajalakshmi Nagar,Thandalam,Chennai-602-105</h3>
+
+
+<div class="sidebar">
+    <h3> CSE </h3>
+    <a href="intro.html"><h2 > Introduction </h2></a>
+	<a href="opp.html"><h2> Opportunities </h2></a>
+	<a href="fac.html"><h2 class="active"> Faculty Members </h2></a>
+	<a href="lab.html"><h2> Lab Facility </h2></a>
+	<a href="news.html"><h2> News </h2></a>
+
+
+</div>
+<div class="content">
+    <h2 style="color:blue">FACULTY MEMBERS</h2>
+    <table style="margin-left: 10px;"class="style" border="1px" cellspacing="1px" cellpadding="6px" align="center" >
+        <tr >
+        <th><h3> No</h3></th>
+        <th><h3>Name</h3></th>
+        <th><h3> Designation</h3></th>
+        </tr>
+        <tr>
+            <th>1.</th>
+            <th>Dr.V.Murali Bhaskaran</th>
+            <th>Professor and Dean</th>
+            </tr>
+            <tr >
+                <th>2.</th>
+                <th>Dr.P.Kumar</th>
+                <th>Head and Director</th>
+                </tr>
+                <tr >
+                    <th>3.</th>
+                    <th>Dr.revathy.P</th>
+                    <th>Professor</th>
+                    </tr>
+            </table>
+</div>
+</body>
+</html>
+
