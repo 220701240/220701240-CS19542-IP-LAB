@@ -1,0 +1,177 @@
+<head>
+    
+    <title>Course Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+    <form method="post" action="#" name="f1" onsubmit="return validateForm()" >
+      
+        Student Name:<input type="text" id="student_name" name="student_name">
+        <span class="error" id="name_error"></span><br><br>
+        
+      
+      
+        Roll Number:<input type="text" id="rollno" name="rollno">
+        <span class="error" id="rollno_error"></span><br><br>
+        
+       
+        Gender: <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <span class="error" id="gender_error"></span><br><br>
+        
+        
+        Year:<input type="text" id="year" name="year">
+        <span class="error" id="year_error"></span><br><br>
+        
+     
+        Department: <input type="text" id="department" name="department">
+        <span class="error" id="department_error"></span><br><br>
+        
+       
+        Section:<input type="text" id="section" name="section">
+        <span class="error" id="section_error"></span><br><br>
+        
+        
+        Mobile Number:<input type="text" id="mobile_no" name="mobile_no">
+        <span class="error" id="mobile_error"></span><br><br>
+
+        
+        E-Mail ID:<input type="text" id="email" name="email">
+        <span class="error" id="email_error"></span><br><br>
+        
+        
+        Address:<textarea id="address" name="address" rows="4" cols="36"></textarea>
+        <span class="error" id="address_error"></span><br><br>
+        
+      
+        City:<input type="text" id="city" name="city">
+        <span class="error" id="city_error"></span><br><br>
+      
+        Country: <select  id="country" name="country">
+        <option>India</option>
+        <option>USA</option>
+        <option>China</option>
+        <option>japan</option>
+        </select>
+        <span class="error" id="country_error"></span><br><br>
+        
+      
+        Pincode:<input type="text" id="pincode" name="pincode">
+        <span class="error" id="pincode_error"></span><br><br>
+        
+        <input type="submit" value="Submit Your Entries" >
+        <input type="reset" value="Clear Your Entries">
+    </form>
+
+    <script>
+        function validateForm() {
+            var isValid=true;
+            // Name validation
+            const name = document.getElementById('student_name').value;
+            if (!name) {
+                document.getElementById('name_error').textContent = 'Please enter your name';
+                isValid = false;
+            }
+            
+            // Roll Number validation
+            const rollno = document.getElementById('rollno').value;
+            if (!rollno) {
+                document.getElementById('rollno_error').textContent = 'Please enter your roll number';
+                isValid = false;
+            }
+            
+            // Gender validation
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                document.getElementById('gender_error').textContent = 'Please select your gender';
+                isValid = false;
+            }
+            
+            // Year validation
+            const year = document.getElementById('year').value;
+            if (!year) {
+                document.getElementById('year_error').textContent = 'Please enter your year';
+                isValid = false;
+            }
+            
+            // Department validation
+            const department = document.getElementById('department').value;
+            if (!department) {
+                document.getElementById('department_error').textContent = 'Please enter your department';
+                isValid = false;
+            }
+            
+            // Section validation
+            const section = document.getElementById('section').value;
+            if (!section) {
+                document.getElementById('section_error').textContent = 'Please enter your section';
+                isValid = false;
+            }
+            
+            // Mobile number validation
+            const mobile = document.getElementById('mobile_no').value;
+            if (!mobile) {
+                document.getElementById('mobile_error').textContent = 'Please enter your mobile number';
+                isValid = false;
+            } else if (!/^\d{10}$/.test(mobile)) {
+                document.getElementById('mobile_error').textContent = 'Please enter a valid 10-digit mobile number';
+                isValid = false;
+            }
+            
+            // Email validation
+            const email = document.getElementById('email').value;
+            var atpos=email.indexOf("@");
+            var dotpos=email.indexOf(".");
+
+            if (!email) {
+                document.getElementById('email_error').textContent = 'Please enter your email';
+                isValid = false;
+            } else if ((atpos<1)||(dotpos<atpos+2)||(dotpos+2>email.length)) {
+                document.getElementById('email_error').textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+            
+            // Address validation
+            const address = document.getElementById('address').value;
+            if (!address) {
+                document.getElementById('address_error').textContent = 'Please enter your address';
+                isValid = false;
+            }
+            
+            // City validation
+            const city = document.getElementById('city').value;
+            if (!city) {
+                document.getElementById('city_error').textContent = 'Please enter your city';
+                isValid = false;
+            }
+            
+            // Country validation
+            const country = document.getElementById('country').value;
+            if (!country) {
+                document.getElementById('country_error').textContent = 'Please enter your country';
+                isValid = false;
+            }
+            
+            // Pincode validation
+            const pincode = document.getElementById('pincode').value;
+            if (!pincode) {
+                document.getElementById('pincode_error').textContent = 'Please enter your pincode';
+                isValid = false;
+            } else if (!/^\d{6}$/.test(pincode)) {
+                document.getElementById('pincode_error').textContent = 'Please enter a valid 6-digit pincode';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+    </script>
+</body>
+</html>
