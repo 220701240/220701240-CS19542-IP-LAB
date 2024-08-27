@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="courseformreg" action="Formpost" method="post">
+Student Name:<input type="text" id="name" name="name" required><br><br>
+ Roll Number: <input type="text" id="rollno" name="rollno" required><br><br>
+
+       
+        Gender: <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+       Year:
+        <input type="number" id="year" name="year" min="1" max="4" required><br><br>
+
+     Department:
+        <input type="text" id="department" name="department" required><br><br>
+
+        Section:
+        <input type="text" id="section" name="section" required><br><br>
+Mobile Number:
+        <input type="tel" id="mobile_no" name="mobile_no" pattern="[0-9]{10}" required><br><br>
+
+       E-Mail ID:
+        <input type="email" id="email" name="email" required><br><br>
+Address:
+        <textarea id="address" name="address" required></textarea><br><br>
+
+     City:
+        <input type="text" id="city" name="city" required><br><br>
+
+       Country:
+        <input type="text" id="country" name="country" required><br><br>
+
+  Pincode:
+        <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>
